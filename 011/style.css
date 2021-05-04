@@ -1,0 +1,28 @@
+img {
+   width: 200px;
+   height: auto;
+   margin: 10px;
+   border: 1px solid green;
+}
+
+.left {
+   float: left;
+}
+
+.right {
+   float: right;
+ }
+
+ p {
+    text-align: justify;
+ }
+
+ .container {
+    border: 2px solid black;
+ }
+
+ .container::after {
+    content: "";
+    clear: both;
+    display: table;
+ }

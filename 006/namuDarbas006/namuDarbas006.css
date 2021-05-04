@@ -1,0 +1,71 @@
+.container {
+   display: flex;
+}
+
+.box {
+   border: 2px solid black;
+   border-left: none;
+   border-bottom: none;
+   width: 100%;
+   height: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   padding: 5px;
+}
+
+.box.first {
+   border-left: 2px solid black;
+}
+
+.box.end {
+   border-left: 2px solid black;
+   border-bottom: 2px solid black;
+}
+
+.box img {
+   height: 200px;
+   width: auto;
+   border: 1px solid black;
+   border-radius: 50%;
+}
+
+.box .title {
+   position: absolute;
+   bottom: 10px;
+   font-size: 30px;
+   font-weight: bold;
+}
+
+.box .title.wolf {
+   top: 0px;
+   transform: rotate(-90deg);
+   font-size: 35px;
+   letter-spacing: 5px;
+}
+
+.box .title.elephant {
+   bottom: 20px;
+}
+
+.box .title.rabbit {
+   top: 20px;
+   transform: rotate(90deg);
+}
+
+.box .title.fox {
+   top: 3px;
+}
+
+.title a {
+   text-decoration: none;
+   color: rgb(8, 8, 161);
+   opacity: 0.7;
+}
+
+.title a:hover {
+   color:rgb(0, 0, 0);
+   opacity: 1;
+}
+

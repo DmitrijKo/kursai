@@ -1,0 +1,42 @@
+body {
+   background-color: mistyrose;
+   letter-spacing: -.31em;
+   text-rendering: optimizeSpeed;
+   margin: 0px;
+}
+
+div {
+   box-sizing: border-box;
+   zoom: 1;
+   letter-spacing: normal;
+   text-rendering: auto;
+}
+
+.box {
+   border: 1px solid hotpink;
+   border-left: none;
+   background-color: lightblue;
+   padding: 10px;
+   margin: 0px;
+   height: 80px;
+   width: 33.33333%;
+   display: inline-block;
+}
+
+.box.first {
+   border-left: 1px solid hotpink;;
+}
+
+.box span {
+   background-color: gray;
+   color: lemonchiffon;
+   display: block;
+   width: 50px;
+   height: 20px;
+   margin: 0 auto;
+   text-align: center;
+   line-height: 20px;
+   position: relative;
+   top: calc(50% - 10px);
+
+}

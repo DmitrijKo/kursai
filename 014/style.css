@@ -1,0 +1,59 @@
+body, header, nav, ul, li {
+   padding: 0px;
+   margin: 0px;
+   font-family: 'Mukta', sans-serif;
+}
+
+li {
+   padding: 15px;
+   font-size: 30px;
+   background-color: darkblue;
+   float: left;
+   transition: all 300ms;
+}
+
+li:hover {
+   background-color: rgb(0, 0, 92);
+}
+
+header li a {
+   text-decoration: none;
+   color: crimson;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   font-weight: 200;
+   transition: all 300ms;
+}
+
+header li a:hover {
+   border-bottom: 1px solid crimson;
+}
+
+ul {
+   list-style: none;
+   background-color: darkblue;
+}
+
+ul::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+@media screen and (max-width: 600px) {
+   
+   header li{
+      padding: 5px 15px;
+      font-size: 24px;
+      background-color: darkblue;
+      float: none;
+   }
+
+   header li a {
+      font-weight: bold;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+   }
+
+}

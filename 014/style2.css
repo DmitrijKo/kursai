@@ -1,0 +1,55 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0px;
+}
+
+.container {
+   /*height: 200px;*/
+   border: 2px solid black;
+}
+
+.container .first {
+   background-color: cadetblue;
+}
+
+.container .second {
+   background-color: cornflowerblue;
+}
+
+.container .last {
+   background-color: cyan;
+}
+
+.container > div {
+   float: left;
+   height: 100%;
+   width: 33.3333%;
+   height: 200px;
+   text-align: center;
+}
+
+.container::after {
+   content: '';
+   display: table;
+   clear: both;
+}
+
+@media screen and (max-width: 1000px) {
+   .container .box {
+      width: 100%;
+   }
+
+   .box.first, .box.second {
+      width: 50%;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .container .box {
+     width: 100%;
+  }
+
+}

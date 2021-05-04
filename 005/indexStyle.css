@@ -1,0 +1,60 @@
+.next {
+   border: 2px solid black;
+   margin-bottom: 15px;
+   padding: 5px;
+}
+
+.list {
+   background-color: aqua;
+   border: 1px solid black;
+}
+
+.list li {
+   margin: 10px;
+   border: 2px solid yellow;
+}
+
+/* NEXT 1 */
+
+.next1 {
+   border: 2px solid black;
+   padding: 5px;
+}
+
+/* Labas rytas */
+
+.lr {
+   color: red;
+}
+
+.lr span {
+   color: green;
+}
+
+/* Labas dienas */
+
+.ld {
+   color: blue;
+}
+
+.ld i {
+   color: yellow;
+}
+
+/* Labas vakaras */
+
+.lv {
+   color: coral;
+}
+
+.lv strong {
+   color:cyan;
+}
+
+/* NEXT 2 */
+
+
+
+
+
+
