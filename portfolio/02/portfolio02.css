@@ -3,57 +3,132 @@
           box-sizing: border-box;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+body {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-blockquote, q {
-  quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
 p {
   font-family: 'Libre Baskerville', serif;
+}
+
+.container {
+  max-width: 1820px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0px 35px 0px;
+}
+
+.header-container .menu-burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.header-container .menu-burger .burger {
+  font-size: 30px;
+  color: #d73455;
+}
+
+.header-container .menu-burger .menu {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.85714em;
+  font-weight: 700;
+  color: #d73455;
+  line-height: 16px;
+  padding-left: 8px;
+  text-transform: uppercase;
+}
+
+.header-container .logo img {
+  width: 150px;
+  height: auto;
+}
+
+.header-container .navigation-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-container .navigation-button ul.social-list-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px;
+  margin: 0;
+}
+
+.header-container .navigation-button ul.social-list-top li {
+  list-style: none;
+  width: 20px;
+  font-size: 0px;
+  margin: 0 0 0 12px;
+}
+
+.header-container .navigation-button ul.social-list-top li a {
+  text-decoration: none;
+}
+
+.header-container .navigation-button ul.social-list-top li a svg {
+  fill: #d73455;
+}
+
+.header-container .navigation-button ul.user-search-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px;
+  margin: auto;
+  margin-left: 30px;
+}
+
+.header-container .navigation-button ul.user-search-cart li.user {
+  margin-right: 12px;
+}
+
+.header-container .navigation-button ul.user-search-cart li.search {
+  margin-right: 12px;
+}
+
+.header-container .navigation-button ul.user-search-cart li {
+  list-style: none;
+  width: 25px;
+  font-size: 0px;
+  cursor: pointer;
+}
+
+.header-container .navigation-button ul.user-search-cart li svg {
+  fill: #d73455;
+}
+
+.header-container .navigation-button ul.user-search-cart li a {
+  text-decoration: none;
+}
+
+.header-container .navigation-button ul.user-search-cart li a span {
+  color: #d73455;
+  font-family: "ITC Conduit", sans-serif;
+  font-weight: 700;
+  font-size: 0.85714em;
 }
 /*# sourceMappingURL=portfolio02.css.map */
