@@ -108,12 +108,18 @@ p {
 
 .header-container .navigation-button ul.user-search-cart li.search {
   margin-right: 12px;
+  width: 23px;
+}
+
+.header-container .navigation-button ul.user-search-cart li.cart {
+  position: relative;
+  margin-left: 7px;
+  width: 26px;
 }
 
 .header-container .navigation-button ul.user-search-cart li {
   list-style: none;
   width: 25px;
-  font-size: 0px;
   cursor: pointer;
 }
 
@@ -129,6 +135,113 @@ p {
   color: #d73455;
   font-family: "ITC Conduit", sans-serif;
   font-weight: 700;
-  font-size: 0.85714em;
+  font-size: 14px;
+  position: absolute;
+  top: 8px;
+  left: -7px;
+}
+
+.slideshow-container {
+  position: relative;
+}
+
+.slideshow-container .image-container-blue {
+  padding: 30px;
+  max-width: 2000px;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://cdn.shopify.com/s/files/1/1004/5518/files/feature_image_1.jpg?v=1522119992");
+  background-size: cover;
+  background-position: center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slideshow-container .image-container-blue .content-wrapper {
+  text-align: center;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.slideshow-container .image-container-blue .content-wrapper .h1-title {
+  margin: auto;
+}
+
+.slideshow-container .image-container-blue .content-wrapper .h1-title h1 {
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: inline;
+  border-bottom: 4px solid #d73455;
+}
+
+.slideshow-container .image-container-blue .content-wrapper .slide-button {
+  margin: auto;
+}
+
+.slideshow-container .image-container-blue .content-wrapper .slide-button a.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  padding: 7.5px 15px 8.5px;
+  background: #d73455;
+  border: 2px solid #d73455;
+  border-radius: 3px;
+  margin-top: 50px;
+}
+
+.slideshow-container .image-container-blue .content-wrapper .slide-button a.btn span {
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0px;
+  color: white;
+  line-height: 1.7;
+}
+
+.slideshow-container .image-container-blue .content-wrapper .slide-button a.btn svg {
+  width: 20px;
+  margin-left: 8px;
+  fill: white;
+}
+
+.slideshow-container .image-container-blue .content-wrapper .slide-button a.btn:hover {
+  background-color: black;
+  border: 2px solid black;
+}
+
+.slideshow-container .arrow-left {
+  position: absolute;
+  width: 50px;
+  top: calc(50% - 25px);
+  left: 30px;
+  fill: white;
+  cursor: pointer;
+}
+
+.slideshow-container .arrow-right {
+  position: absolute;
+  width: 50px;
+  top: calc(50% - 25px);
+  right: 30px;
+  fill: white;
+  cursor: pointer;
 }
 /*# sourceMappingURL=portfolio02.css.map */
