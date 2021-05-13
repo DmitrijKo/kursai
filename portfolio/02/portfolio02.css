@@ -141,11 +141,11 @@ p {
   left: -7px;
 }
 
-.slideshow-container {
+.slideshow {
   position: relative;
 }
 
-.slideshow-container .image-container-blue {
+.slideshow .image-container-blue {
   padding: 30px;
   max-width: 2000px;
   width: 100%;
@@ -158,7 +158,7 @@ p {
   display: flex;
 }
 
-.slideshow-container .image-container-blue .content-wrapper {
+.slideshow .image-container-blue .content-wrapper {
   text-align: center;
   margin: auto;
   display: -webkit-box;
@@ -173,11 +173,11 @@ p {
           justify-content: center;
 }
 
-.slideshow-container .image-container-blue .content-wrapper .h1-title {
+.slideshow .image-container-blue .content-wrapper .h1-title {
   margin: auto;
 }
 
-.slideshow-container .image-container-blue .content-wrapper .h1-title h1 {
+.slideshow .image-container-blue .content-wrapper .h1-title h1 {
   margin: 0px;
   font-family: 'Roboto', sans-serif;
   color: white;
@@ -189,11 +189,11 @@ p {
   border-bottom: 4px solid #d73455;
 }
 
-.slideshow-container .image-container-blue .content-wrapper .slide-button {
+.slideshow .image-container-blue .content-wrapper .slide-button {
   margin: auto;
 }
 
-.slideshow-container .image-container-blue .content-wrapper .slide-button a.btn {
+.slideshow .image-container-blue .content-wrapper .slide-button a.btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,7 +205,7 @@ p {
   margin-top: 50px;
 }
 
-.slideshow-container .image-container-blue .content-wrapper .slide-button a.btn span {
+.slideshow .image-container-blue .content-wrapper .slide-button a.btn span {
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
   font-size: 12px;
@@ -216,18 +216,18 @@ p {
   line-height: 1.7;
 }
 
-.slideshow-container .image-container-blue .content-wrapper .slide-button a.btn svg {
+.slideshow .image-container-blue .content-wrapper .slide-button a.btn svg {
   width: 20px;
   margin-left: 8px;
   fill: white;
 }
 
-.slideshow-container .image-container-blue .content-wrapper .slide-button a.btn:hover {
+.slideshow .image-container-blue .content-wrapper .slide-button a.btn:hover {
   background-color: black;
   border: 2px solid black;
 }
 
-.slideshow-container .arrow-left {
+.slideshow .arrow-left {
   position: absolute;
   width: 50px;
   top: calc(50% - 25px);
@@ -236,12 +236,169 @@ p {
   cursor: pointer;
 }
 
-.slideshow-container .arrow-right {
+.slideshow .arrow-right {
   position: absolute;
   width: 50px;
   top: calc(50% - 25px);
   right: 30px;
   fill: white;
   cursor: pointer;
+}
+
+.snapbacks-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.snapbacks-container .text-container {
+  padding: 60px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.snapbacks-container .text-container h2 {
+  font-size: 13.5px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: black;
+  margin: 0px;
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.snapbacks-container .text-container h2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 15px;
+  background-color: #f0f0f0;
+  margin: 15px auto 0;
+}
+
+.snapbacks-container .text-container .paragraph {
+  width: 95%;
+}
+
+.snapbacks-container .text-container .paragraph p {
+  margin: 0px;
+  font-family: "Libre Baskerville", serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.snapbacks-container .text-container .paragraph p:first-child {
+  margin-bottom: 15px;
+}
+
+.snapbacks-container .goods-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 60px 0px;
+}
+
+.snapbacks-container .goods-container .goods {
+  width: 50%;
+  position: relative;
+  padding-left: 25px;
+}
+
+.snapbacks-container .goods-container .goods.goods:nth-child(odd) {
+  padding-left: 0px;
+  padding-right: 25px;
+}
+
+.snapbacks-container .goods-container .goods a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.snapbacks-container .goods-container .goods a img {
+  width: 100%;
+  height: auto;
+}
+
+.snapbacks-container .goods-container .goods a .content {
+  position: absolute;
+}
+
+.snapbacks-container .goods-container .goods a .content h3 {
+  text-align: center;
+  line-height: 1.2em;
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.snapbacks-container .goods-container .goods a .content .btn {
+  text-align: center;
+  padding: 0px;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  padding: 7.5px 15px 8.5px;
+  background: #d73455;
+  border: 2px solid #d73455;
+  border-radius: 3px;
+  margin: 30px auto auto auto;
+  cursor: pointer;
+}
+
+.snapbacks-container .goods-container .goods a .content .btn.btn:hover {
+  background-color: black;
+  border-color: black;
+}
+
+.snapbacks-container .goods-container .goods a .content .btn span {
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0px;
+  color: white;
+  line-height: 1.7;
+}
+
+.snapbacks-container .goods-container .goods a .content .btn svg {
+  width: 20px;
+  margin-left: 8px;
+  fill: white;
 }
 /*# sourceMappingURL=portfolio02.css.map */
