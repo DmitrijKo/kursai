@@ -401,4 +401,36 @@ p {
   margin-left: 8px;
   fill: white;
 }
+
+.best-sellers-container {
+  border: 1px solid black;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.best-sellers-container .text-container {
+  border: 1px solid #3b3bff;
+}
+
+.best-sellers-container .best-sellers {
+  border: 1px solid yellow;
+}
+
+.best-sellers-container .best-sellers .box a {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.best-sellers-container .best-sellers .box a img {
+  width: 25%;
+  border: 1px solid green;
+}
+
+.best-sellers-container .best-sellers .box a .text {
+  border: 1px solid red;
+}
 /*# sourceMappingURL=portfolio02.css.map */

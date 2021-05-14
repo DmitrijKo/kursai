@@ -370,3 +370,42 @@ p {
             }
       }
 }
+
+
+
+/// BEST-SELLER SECTION ///
+
+.best-sellers-container {
+   border: 1px solid black;
+
+      .text-container {
+         border: 1px solid rgb(59, 59, 255);    
+      }
+
+      .best-sellers {
+         border: 1px solid yellow;
+         display: flex;
+
+         
+         .box {
+
+
+            a {
+
+
+               .img {
+                  border: 1px solid green;
+                  display: block;
+               }
+
+               .text {
+                  border: 1px solid red;
+               }
+
+               p {
+                  
+               }
+            }
+         }
+      }
+}
