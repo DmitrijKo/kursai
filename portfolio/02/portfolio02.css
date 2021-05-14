@@ -407,7 +407,7 @@ p {
 }
 
 .best-sellers-container .text-container {
-  padding-top: 50px;
+  margin-top: 50px;
 }
 
 .best-sellers-container .text-container h2 {
@@ -438,6 +438,7 @@ p {
 }
 
 .best-sellers-container .best-sellers .box {
+  margin-right: 50px;
   width: 25%;
 }
 
@@ -466,13 +467,23 @@ p {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   margin: 0px;
-  padding: 2.5px;
+  padding: 3px;
 }
 
 .best-sellers-container .best-sellers .box a .red {
   color: #d73455;
+  letter-spacing: 0.1em;
+  font-size: 11.5px;
+}
+
+.best-sellers-container .best-sellers .box a:hover {
+  opacity: 0.6;
+}
+
+.best-sellers-container .best-sellers .box:last-child {
+  margin-right: 0px;
 }
 /*# sourceMappingURL=portfolio02.css.map */

@@ -379,7 +379,7 @@ p {
    width: 100%;
 
       .text-container {
-         padding-top: 50px;
+         margin-top: 50px;
 
 
          h2 {
@@ -407,43 +407,55 @@ p {
 
       .best-sellers {
          display: flex;
-         
 
-         
-         .box {
-            
-            width: 25%;
+            .box {
+               margin-right: 50px;
+               width: 25%;
 
-            a {
-               display: flex;
-               flex-direction: column;
-               text-decoration: none;
+               a {
+                  display: flex;
+                  flex-direction: column;
+                  text-decoration: none;
+                  
 
-               img {
-                  //display: block;
-                  width: 100%;
-                  height: auto;
+                  img {
+                     //display: block;
+                     width: 100%;
+                     height: auto;
+                  }
+
+                  .text {
+                     text-align: center;
+                  }
+
+                  p {
+                     color: black;
+                     font-family: 'Roboto', sans-serif;
+                     font-size: 12px;
+                     font-weight: 500;
+                     letter-spacing: 0.05em;
+                     text-transform: uppercase;
+                     margin: 0px;
+                     padding: 3px;
+                  }
+
+                  .red {
+                     color: #d73455;
+                     letter-spacing: 0.1em;
+                     font-size: 11.5px;
+                  }
+
                }
 
-               .text {
-                  text-align: center;
+               & a:hover {
+                  opacity: 0.6;
                }
 
-               p {
-                  color: black;
-                  font-family: 'Roboto', sans-serif;
-                  font-size: 12px;
-                  font-weight: 500;
-                  letter-spacing: 0.04em;
-                  text-transform: uppercase;
-                  margin: 0px;
-                  padding: 2.5px;
-               }
-
-               .red {
-                  color: #d73455;
-               }
             }
-         }
-      }
+
+            & .box:last-child {
+               margin-right: 0px;
+            }
+         
+   }
 }
