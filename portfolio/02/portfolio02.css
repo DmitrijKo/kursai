@@ -542,6 +542,7 @@ p {
 .section-content .news-container .box a .img-container {
   height: 300px;
   background-size: cover;
+  margin-bottom: 15px;
 }
 
 .section-content .news-container .box a .img-container.first {
