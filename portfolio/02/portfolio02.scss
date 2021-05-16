@@ -1,4 +1,4 @@
-//CSS RESET
+/// CSS RESET ///
 
 * {
    box-sizing: border-box;
@@ -22,7 +22,7 @@ p {
 
 
 
-//HEADER
+/// HEADER ///
 
 .header-container {
    display: flex;
@@ -511,7 +511,6 @@ p {
       .news-container {
          display: flex;
          padding-bottom: 60px;
-         //justify-content: space-between;
 
             .box {
                margin-right: 50px;
@@ -612,6 +611,8 @@ p {
             }
       }
 }
+
+
 
 hr {
    border-top: solid #f0f0f0;
