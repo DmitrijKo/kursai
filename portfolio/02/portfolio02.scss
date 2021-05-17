@@ -22,9 +22,7 @@ p {
    //z-index: 1;
 }
 
-//body {
-//   overflow-y: hidden;
-//}
+
 
 
 
@@ -240,7 +238,12 @@ p {
 
 #sidebar-menu:checked + div {
    margin-left: 300px;
+   //overflow-y: hidden;
 } 
+
+#sidebar-menu:checked + body {
+   
+}
 
 
 
