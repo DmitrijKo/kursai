@@ -12,6 +12,10 @@ p {
    margin: 0 auto;
    padding: 0 60px;
    position: relative;
+
+      @media screen and (max-width: 480px) {
+         padding: 0px 30px;
+   }
 }
 
 .wrapper {
@@ -275,6 +279,10 @@ p {
                   line-height: 16px;
                   padding-left: 8px;
                   text-transform: uppercase;
+
+                     @media screen and (max-width: 770px) {
+                        display: none;
+                     }
                }
    
             &:hover div {
@@ -321,6 +329,10 @@ p {
                                  
                            }
                      }
+
+                     @media screen and (max-width: 770px) {
+                        display: none;
+                     }
                }
    
                ul.user-search-cart {
@@ -331,11 +343,19 @@ p {
    
                      li.user {
                         margin-right: 12px;
+
+                        @media screen and (max-width: 770px) {
+                           display: none;
+                        }
                      }
    
                      li.search {
                         margin-right: 12px;
                         width: 23px;
+
+                        @media screen and (max-width: 770px) {
+                           display: none;
+                        }
                      }
    
                      li.cart {
@@ -388,7 +408,8 @@ p {
       position: absolute;
       top: 95px;
       right: 60px;
-      opacity: 0;
+      height: 0px;
+      overflow: hidden;
       transition: all 200ms;
 
          ul {
@@ -467,7 +488,7 @@ p {
 }
 
 #user:checked ~ div.container div.user-log  {
-   opacity: 1;
+   height: 40px;
 }
 
 #search:checked ~ div.container {
@@ -747,6 +768,11 @@ p {
                &.goods:nth-child(odd) {
                   padding-left: 0px;
                   padding-right: 25px;
+
+                  @media screen and (max-width: 770px) {
+                     padding-right: 0px;
+                  }
+
                }
 
                a {
@@ -773,6 +799,10 @@ p {
                            font-weight: 500;
                            letter-spacing: 0.1em;
                            text-transform: uppercase;
+
+                           @media screen and (max-width: 1024px) {
+                              font-size: 25px;
+                           }
                         }
    
                         .btn {
@@ -809,11 +839,28 @@ p {
                               margin-left: 8px;
                               fill:white;
                            }
+
+                           @media screen and (max-width: 1024px) {
+                              margin-top: 15px;
+                           }
    
                         } 
                      } 
+
+                    
                }
-            }
+
+               @media screen and (max-width: 770px) {
+                  display: block;
+                  width: 100%;
+                  margin-bottom: 50px;
+                  padding-left: 0px;
+
+                  &:last-child {
+                     margin-bottom: 0px;
+                  }
+               }
+            } 
       }
 }
 
@@ -898,13 +945,27 @@ p {
                   opacity: 0.6;
                }
 
+               @media screen and (max-width: 770px) {
+                  width: 50%;
+                  margin-right: 0px;
+               }
+
+               @media screen and (max-width: 770px) {
+                  width: 100%;
+               }
+
             }
 
             & .box:last-child {
                margin-right: 0px;
             }
-         
-   }
+
+            @media screen and (max-width: 770px) {
+               flex-wrap: wrap;
+               
+               //width: 50%;
+            }
+      }
 }
 
 
@@ -950,12 +1011,9 @@ p {
 
                   a {
                      text-decoration: none;
-                     //display: block;
-                     //margin-bottom: 15px;
+
 
                         .img-container {
-                           //display: block;
-                           //width: 33.33333%;
                            height: 300px;
                            background-size: cover;
                            margin-bottom: 15px;
@@ -1041,8 +1099,18 @@ p {
                   &.box:last-child {
                      margin-right: 0px;
                   }
+
+                  @media screen and (max-width: 770px) {
+                     width: 100%;
+                     margin-right: 0px;
+                  }
+            }
+
+            @media screen and (max-width: 770px) {
+               flex-wrap: wrap;
             }
       }
+
 }
 
 
