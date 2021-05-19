@@ -252,14 +252,15 @@ p {
 
 /// HEADER ///
 
-.container {
-   transition: all 300ms;
+header .container {
+   //transition: all 300ms;
+   padding-bottom: 35px;
 
    .header-container {
       display: flex;
       justify-content: space-between;
       align-items:center;
-      padding: 30px 0px 35px 0px;
+      padding: 30px 0px 0px 0px;
 
          .menu-burger {
             display: flex;
@@ -405,12 +406,14 @@ p {
    }
 
    .user-log {
-      position: absolute;
-      top: 95px;
-      right: 60px;
+      position: relative;
+      //top: 95px;
+      //right: 60px;
+      transition: all 500ms;
+      //opacity: 0;
       height: 0px;
       overflow: hidden;
-      transition: all 200ms;
+      z-index: 100;
 
          ul {
             text-align: right;
@@ -418,32 +421,35 @@ p {
                li {
                   display: inline-block;
                   margin-left: 16px;
-
+                  padding-top: 5px;
+                  
                      a {
                         color: #d73455;
                         text-transform: uppercase;
                         font-size: 12.5px;
                         letter-spacing: 0;
                         font-family: "Open Sans", sans-serif;
-                        padding: 8px 0;
-                        font-weight: bold;
+                        font-weight: bold; 
 
                            &:hover {
                               color: black;
                            }
-                     }
-                  
+                     } 
                }
          }
    }
 
    .search-input {
       width: 250px;
-      position: absolute;
-      top: 95px;
-      right: 60px;
-      opacity: 0;
-      transition: all 200ms;
+      position: relative;
+      //top: 95px;
+      //right: 60px;
+      //opacity: 0;
+      transition: all 500ms;
+      margin: 0 0 0 auto;
+      height: 0;
+      overflow: hidden;
+      
 
          input {
             width: 100%;
@@ -483,25 +489,16 @@ p {
    }
 }
 
-#user:checked ~ div.container {
-   margin-bottom: 30px;
-}
-
 #user:checked ~ div.container div.user-log  {
-   height: 40px;
-}
-
-#search:checked ~ div.container {
-   margin-bottom: 30px;
+   height: 37px;
 }
 
 #search:checked ~ div.container div.search-input  {
-   opacity: 1;
+   height: 37px;
 }
 
+
       
-
-
 
 /// MAIN SLIDESHOW ///
 
@@ -521,6 +518,7 @@ p {
          position: relative;
          opacity: 0;
          transition: all 300ms;
+         z-index: 100;
 
             .content-wrapper {
                text-align: center;
@@ -532,7 +530,6 @@ p {
 
                   .h1-title {
                      
-
                         h1 {
                            margin: 0px;
                            font-family: 'Roboto', sans-serif;
@@ -550,7 +547,6 @@ p {
                   .slide-button {
                      margin: auto;
                      
-
                         a.btn {
                            display: flex;
                            text-decoration: none;
@@ -680,6 +676,7 @@ p {
          left: 30px;
          fill: white;
          cursor: pointer;
+         z-index: 101;
       }
 
       .arrow-right {
@@ -689,6 +686,7 @@ p {
          right: 30px;
          fill: white;
          cursor: pointer;
+         z-index: 101;
     
       }
 
@@ -950,7 +948,7 @@ p {
                   margin-right: 0px;
                }
 
-               @media screen and (max-width: 770px) {
+               @media screen and (max-width: 480px) {
                   width: 100%;
                }
 
