@@ -513,14 +513,13 @@ header .container {
          background-size: cover;
          background-position: center center;
          display: flex;
-         text-align: center;
          position: relative;
          opacity: 0;
          transition: all 300ms;
-         z-index: 100;
+         z-index: 101;
+         text-align: center;
 
             .content-wrapper {
-               text-align: center;
                margin: auto;
                display: flex;
                flex-direction: column;
@@ -595,15 +594,14 @@ header .container {
          background-size: cover;
          background-position: center center;
          display: flex;
-         text-align: center;
          position: absolute;
          top: 0px;
          opacity: 0;
+         text-align: center;
          transition: all 300ms;
          
 
             .content-wrapper {
-               text-align: center;
                margin: auto;
                display: flex;
                flex-direction: column;
