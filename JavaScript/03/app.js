@@ -6,7 +6,7 @@ function rand(min, max) {
 var kin1 = rand(0, 25);
 var kin2 = rand(0, 25);
 var kin3 = rand(0, 25);
-// console.log(kin1, kin2, kin3);
+ console.log(kin1, kin2, kin3);
 
 var animal;
 
