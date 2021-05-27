@@ -7,9 +7,12 @@ function rand(min, max) {
 
 
 // UŽDUOTIS NR.1
+// Didesnę reikšmę padalinkite iš mažesnės.
 
 var kint1 = rand(0, 4);
 var kint2 = rand(0, 4);
+
+console.log('SUGENERUOTI SKAIČIAI:', kint1, kint2);
 
 var rez;
 
@@ -25,54 +28,108 @@ if (kint1 >= kint2) {
 
 
 // UŽDUOTIS NR.2
+// Raskite kintąmąjį turintį vidurinę reikšmę.
 
-//var kint1 = rand(0, 25);
-//var kint2 = rand(0, 25);
-//var kint3 = rand(0, 25);
+var a = rand(0, 25);
+var b = rand(0, 25);
+var c = rand(0, 25);
 
-//var sum;
+console.log('SUGENERUOTI SKAIČIAI:', a, b, c);
+
+if (a > b && a < c || a < b && a > c) {
+   console.log('VIDURINĖ REIKŠMĖ:', a)
+} else if (b > a && b < c || b < a && b > c) {
+   console.log('VIDURINĖ REIKŠMĖ:', b)
+} else {
+   console.log('VIDURINĖ REIKŠMĖ:', c)
+}
+
+
+
+// UŽDUOTIS NR.3
+// Įvedami skaičiai -a, b, c –kraštinių ilgiai.
+// Parašykite skriptą, kuris nustatytų, ar galima sudaryti trikampį.
+
+var a = rand(1, 10);
+var b = rand(1, 10);
+var c = rand(1, 10);
+
+console.log('SUGENERUOTI SKAIČIAI:', a, b, c);
+
+if (a < b + c) {
+   console.log('GALIMA SUDARYTI TRIKAMPĮ');
+} else if (b < c + a) {
+   console.log('GALIMA SUDARYTI TRIKAMPĮ');
+} else if (c < a + b) {
+   console.log('GALIMA SUDARYTI TRIKAMPĮ');
+} else {
+   console.log('TRIKAMPIO SUDARYTI NEGALIMA');
+}
+
+
+
+// UŽDUOTIS NR.4
+// Sukurkite keturis kintamuosius ir sugeneruokite jiems reikšmes nuo 0 iki 2.
+// Suskaičiuokite kiek yra nulių, vienetų ir dvejetų.
+
+
+//var a = rand(0, 2);
+//var b = rand(0, 2);
+//var c = rand(0, 2);
+//var d = rand(0, 2);
+
+//console.log('SUGENERUOTI SKAIČIAI:', a, b, c, d);
 
 //if () {
 
-//} else {
-
 //}
 
+//console.log('0 yra:', ,'1 yra:', ,'2 yra:', );
 
 
 // UŽDUOTIS NR.5
+// Atspausdinkite 3 skaičius nuo -10 iki 10. 
+// Prie skaičių mažesnių už 0 iš abiejų pusių atspauzdinkite “+” simbolius,
+//  didesnių už 0 iš abiejų pusių atspauzdinkite “-” simbolius, 
+// o prie 0 “*” simbolius
 
 var pirmas = rand(-10, 10);
 var antras = rand(-10, 10);
 var trecias = rand(-10, 10);
 
 if (pirmas < 0) {
-   console.log('+', pirmas, '+');
+   pirmas = '+' + pirmas + '+';
 } else if (pirmas > 0) {
-   console.log('-', pirmas, '-');
+   pirmas = '-' + pirmas + '-';
 } else {
-   console.log('*', pirmas, '*');
+   pirmas = '*' + pirmas + '*';
 }
 
 if (antras < 0) {
-   console.log('+', antras, '+');
+   antras = '+' + antras + '+';
 } else if (antras > 0) {
-   console.log('-', antras, '-');
+   antras = '-' + antras + '-';
 } else {
-   console.log('*', antras, '*');
+   antras = '*' + antras + '*';
 }
 
 if (trecias < 0) {
-   console.log('+', trecias, '+');
+   trecias = '+' + trecias + '+';
 } else if (trecias > 0) {
-   console.log('-', trecias, '-');
+   trecias = '-' + trecias + '-';
 } else {
-   console.log('*', trecias, '*');
+   trecias = '*' + trecias + '*';
 }
+
+console.log(pirmas, antras, trecias);
 
 
 
 // UŽDUOTIS NR.6 
+// Įmonė parduoda žvakes po 1 EUR. 
+//Perkant daugiau kaip už 1000 EUR taikoma 3 % nuolaida, daugiau kaip už 2000 EUR - 4 % nuolaida. 
+// Parašykite skriptą, kuris skaičiuos žvakių kainą,
+// kiek žvakių ir kokia kaina perkama.
 
 var kiekis = rand(5, 3000);
 
@@ -94,3 +151,33 @@ console.log('KIEKIS:', kiekis, 'vnt');
 console.log('NUOLAIDA:', nuolaida);
 console.log('ŽVAKĖS KAINA PO NUOLAIDOS:', kaina, 'Eur');
 console.log('SUMA PO NUOLAIDOS:', suma, 'Eur');
+
+
+
+// UŽDUOTIS NR.7
+// Paskaičiuokite jų aritmetinį vidurkį. 
+//Ir aritmetinį vidurkį atmetus tas reikšmes, kurios yra mažesnės nei 10 arba didesnės nei 90.
+// Abu vidurkius atspausdinkite.
+
+var a = rand(0, 100);
+var b = rand(0, 100);
+var c = rand(0, 100);
+
+console.log('SUGENERUOTI SKAIČIAI:', a, b, c);
+
+var aritVid = (a + b + c) / 3;
+var aritVid1090;
+
+console.log('PIRMAS ARITMETINIS VIDURKIS YRA:', aritVid);
+
+if ((a < 10 || a > 90) && (b > 10 || b < 90) && (c > 10 || c < 90 )) {
+   aritVid1090 = (b + c) / 2;
+} else if ((b < 10 || b > 90) && (a > 10 || a < 90) && (c > 10 || c < 90)) {
+   aritVid1090 = (a + c) / 2;
+} else if ((c < 10 || c > 90) && (a > 10 || a < 90) && (b > 10 || b < 90)) {
+   aritVid1090 = (a + b) / 2;
+} else {
+   aritVid1090 = (a + b + c) / 3;
+}
+
+console.log('ANTRAS ARITMETINIS VIDURKIS YRA:', aritVid1090);
