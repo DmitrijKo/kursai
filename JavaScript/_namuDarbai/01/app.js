@@ -8,20 +8,23 @@ function rand(min, max) {
 
 // UŽDUOTIS NR.1
 // Didesnę reikšmę padalinkite iš mažesnės.
+console.log('UŽDUOTIS NR.1');
 
-var kint1 = rand(0, 4);
-var kint2 = rand(0, 4);
+var a = rand(0, 4);
+var b = rand(0, 4);
 
-console.log('SUGENERUOTI SKAIČIAI:', kint1, kint2);
+console.log('SUGENERUOTI SKAIČIAI:', a, b);
 
 var rez;
 
-if (kint1 >= kint2) {
-   rez = kint1 / kint2;
-   console.log (kint1, '/', kint2, 'rezultatas =', rez);
-}  else {
-   rez = kint2 / kint1;
-   console.log (kint2, '/', kint1, 'rezultatas =', rez);
+if ((b === 0 && a === 0) || a === 0 || b === 0) {
+   console.log ('Dalinti iš 0 negalim!');
+} else if (a >= b) {
+   rez = a / b;
+   console.log (a, '/', b, 'rezultatas:', rez);
+} else {
+   rez = b / a;
+   console.log (b, '/', a, 'rezultatas:', rez);
 }
 
 
@@ -29,6 +32,7 @@ if (kint1 >= kint2) {
 
 // UŽDUOTIS NR.2
 // Raskite kintąmąjį turintį vidurinę reikšmę.
+console.log('UŽDUOTIS NR.2');
 
 var a = rand(0, 25);
 var b = rand(0, 25);
@@ -49,6 +53,7 @@ if (a > b && a < c || a < b && a > c) {
 // UŽDUOTIS NR.3
 // Įvedami skaičiai -a, b, c –kraštinių ilgiai.
 // Parašykite skriptą, kuris nustatytų, ar galima sudaryti trikampį.
+console.log('UŽDUOTIS NR.3');
 
 var a = rand(1, 10);
 var b = rand(1, 10);
@@ -56,11 +61,7 @@ var c = rand(1, 10);
 
 console.log('SUGENERUOTI SKAIČIAI:', a, b, c);
 
-if (a < b + c) {
-   console.log('GALIMA SUDARYTI TRIKAMPĮ');
-} else if (b < c + a) {
-   console.log('GALIMA SUDARYTI TRIKAMPĮ');
-} else if (c < a + b) {
+if (a < b + c && b < c + a && c < a + b) {
    console.log('GALIMA SUDARYTI TRIKAMPĮ');
 } else {
    console.log('TRIKAMPIO SUDARYTI NEGALIMA');
@@ -71,6 +72,7 @@ if (a < b + c) {
 // UŽDUOTIS NR.4
 // Sukurkite keturis kintamuosius ir sugeneruokite jiems reikšmes nuo 0 iki 2.
 // Suskaičiuokite kiek yra nulių, vienetų ir dvejetų.
+console.log('UŽDUOTIS NR.4');
 
 
 //var a = rand(0, 2);
@@ -92,6 +94,7 @@ if (a < b + c) {
 // Prie skaičių mažesnių už 0 iš abiejų pusių atspauzdinkite “+” simbolius,
 //  didesnių už 0 iš abiejų pusių atspauzdinkite “-” simbolius, 
 // o prie 0 “*” simbolius
+console.log('UŽDUOTIS NR.5');
 
 var pirmas = rand(-10, 10);
 var antras = rand(-10, 10);
@@ -130,6 +133,7 @@ console.log(pirmas, antras, trecias);
 //Perkant daugiau kaip už 1000 EUR taikoma 3 % nuolaida, daugiau kaip už 2000 EUR - 4 % nuolaida. 
 // Parašykite skriptą, kuris skaičiuos žvakių kainą,
 // kiek žvakių ir kokia kaina perkama.
+console.log('UŽDUOTIS NR.6');
 
 var kiekis = rand(5, 3000);
 
@@ -158,6 +162,7 @@ console.log('SUMA PO NUOLAIDOS:', suma, 'Eur');
 // Paskaičiuokite jų aritmetinį vidurkį. 
 //Ir aritmetinį vidurkį atmetus tas reikšmes, kurios yra mažesnės nei 10 arba didesnės nei 90.
 // Abu vidurkius atspausdinkite.
+console.log('UŽDUOTIS NR.7');
 
 var a = rand(0, 100);
 var b = rand(0, 100);

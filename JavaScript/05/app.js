@@ -267,3 +267,19 @@ console.log('ITERACIJŲ KIEKIS:', didelis);
 /// UŽDUOTIS NR. 10
 console.log('--------10-------');
 
+var p = 0;
+var k = 0;
+
+do{
+   p += rand(10, 20);
+   k += rand(5, 25);
+
+} while( !(k >= 222 || p >= 222));
+
+if (p >= 222 && k >= 222) {
+   console.log('Nutiko lygios', 'Pertas:', p, 'Kazys:', k);
+} else if (p > k) {
+   console.log('Laimejo Petras', 'Pertas:', p, 'Kazys:', k);
+} else {
+   console.log('Laimejo Kazys', 'Pertas:', p, 'Kazys:', k);
+}
