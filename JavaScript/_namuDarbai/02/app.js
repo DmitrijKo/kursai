@@ -171,6 +171,7 @@ for (var i = 0; i < arr.length; i++) {
 console.log('Naujas masyvas:', arr);
 
 
+
 // UŽDAVINYS Nr.3
 // Sugeneruokite masyvą, kurio reikšmės atsitiktinės raidės A, B, C ir D, o ilgis 200. 
 // Suskaičiuokite kiek yra kiekvienos raidės.
@@ -189,7 +190,8 @@ console.log('Sugeneruotas masyvas iš raidžių yra:', arr3.slice());
 const counter = [0, 0, 0, 0];
 
 for (let i = 0; i < arr3.length; i++) {
-    counter[abcd.indexOf(arr3[i])]++;
+   let index = abcd.indexOf(arr3[i]);
+    counter[index]++;
 }
 
 let a = counter[0];
@@ -201,3 +203,120 @@ console.log('A raidžių yra:', a);
 console.log('B raidžių yra:', b);
 console.log('C raidžių yra:', c);
 console.log('D raidžių yra:', d);
+
+
+
+// UŽDAVINYS Nr.4
+// Sugeneruokite 3 masyvus pagal 3 uždavinio sąlygą. 
+// Sudėkite masyvus, sudėdami atitinkamas reikšmes. 
+// Paskaičiuokite kiek unikalių (po vieną, nesikartojančių) reikšmių ir kiek unikalių kombinacijų gavote.
+
+//const abcd = ['A', 'B', 'C', 'D'];
+//const masyvai = [ [], [], [] ];
+//const triraidis = [];
+//const uniValue = [];
+//const uniComb = [];
+
+//for (let j = 0; j < 3; j++) {
+//    for (let i = 0; i < 20; i++) {
+//        masyvai[j].push(abcd[rand(0, 3)]);
+//    }
+//}
+
+//for (let i = 0; i < 20; i++) {
+//    triraidis.push(masyvai[0][i]+masyvai[1][i]+masyvai[2][i]);
+//}
+
+//top: for (let i = 0; i < triraidis.length; i++) {
+
+//    // Unikali
+//    if (uniComb.indexOf(triraidis[i]) === -1) {
+//        uniComb.push(triraidis[i]);
+//    }
+
+//    // Vienetine
+//    let now = triraidis[i];
+//    let counter = 0;
+//    for (let j = 0; j < triraidis.length; j++) {
+//        if (triraidis[j] === now) {
+//            counter++;
+//            if (counter > 1) {
+//                continue top
+//            }
+//        }
+//    }
+//    uniValue.push(now);
+//}
+
+//console.log(uniValue, uniComb, triraidis);
+
+
+
+// UŽDAVINYS Nr.5
+// Sugeneruokite du masyvus, kurių reikšmės yra atsitiktiniai skaičiai nuo 100 iki 999. 
+// Masyvų ilgiai 100. Masyvų reikšmės turi būti unikalios savo masyve (t.y. neturi kartotis).
+
+const masyvai5 = [ [], [] ];
+let count = 0;
+
+for (let j = 0; j < 2; j++) {
+    do {
+        count++;
+        let random = rand(100, 210);
+        if (masyvai5[j].indexOf(random) === -1) {
+            masyvai5[j].push(random);
+        }
+    } while(masyvai5[j].length < 100);
+}
+
+console.log(masyvai5, count);
+
+
+
+// UŽDAVINYS Nr.6/7
+// 6. Sugeneruokite masyvą, kuris būtų sudarytas iš reikšmių, 
+// 6. kurios yra pirmame 6 uždavinio masyve, bet nėra antrame 6 uždavinio masyve.
+// 7. Sugeneruokite masyvą iš elementų, kurie kartojasi abiejuose 6 uždavinio masyvuose.
+
+const m6 = [];
+const m7 = [];
+
+for (let i = 0; i < masyvai5[0].length; i++) {
+    if (masyvai5[1].indexOf(masyvai5[0][i]) === -1) {
+        m6.push(masyvai5[0][i]);
+    }
+    else {
+        m7.push(masyvai5[0][i]);
+    }
+}
+
+console.log(m6, m7);
+
+
+
+// UŽDAVINYS Nr.8
+// Sugeneruokite masyvą, kurio indeksus sudarytų pirmo 6 uždavinio masyvo reikšmės, o jo reikšmės iš būtų antrojo masyvo.
+
+const funny = [];
+
+for (let i = 0; i < masyvai5[0].length; i++) {
+   funny[masyvai5[0][i]] = masyvai5[1][i];
+ }
+
+console.log(funny);
+
+
+// UŽDAVINYS Nr.9
+// Sugeneruokite 10 skaičių masyvą pagal taisyklę:
+// Du pirmi skaičiai- atsitiktiniai nuo 5 iki 25. 
+//Trečias, pirmo ir antro suma. Ketvirtas- antro ir trečio suma. Penktas trečio ir ketvirto suma ir t.t.
+
+const fm = [];
+
+fm.push(rand(5, 25), rand(5, 25));
+
+for (let j = 2; j < 10; j++) {
+    let sum = fm[j-1] + fm[j-2];
+    fm.push(sum);
+}
+console.log(fm);
