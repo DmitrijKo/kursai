@@ -202,6 +202,13 @@ const myFunction1 = function () {
 
 h1Color.addEventListener('click', myFunction1)
 
+////////////////////////////////////
+
+const myFunction2 = function () {
+   h1.style.fontSize = '10px';
+}
+
+document.querySelector('#h1-font').addEventListener('click', myFunction2);
 
 
 
@@ -211,11 +218,11 @@ console.log('______________ UŽDAVINYS Nr.3B _________________');
 
 const iClick = document.querySelector('i');
 
-const myFunction2 = function () {
+const myFunction3 = function () {
    iClick.style.fontWeight = 'bold';
 }
 
-iClick.addEventListener('click', myFunction2)
+iClick.addEventListener('click', myFunction3)
 
 
 
@@ -232,6 +239,48 @@ const priceBg = function (e) {
 
 document.querySelector('.prices').addEventListener('click', priceBg);
 
-      
 
 
+
+// UŽDAVINYS Nr.3D
+//	Padaryti, kad paspaudus ant tago su id contacts, tam tagui būtų pridėta css savybė color;
+console.log('______________ UŽDAVINYS Nr.3D _________________');
+
+document.querySelector('#contacts').addEventListener('click', e => {
+   e.target.classList.toggle('color');
+});
+
+
+
+// UŽDAVINYS Nr.3E
+//	Padaryti taip, kad paspaudus ant padidinti, esančio tage su id contacts, 
+// tagui su id contacts būtų pridėta css savybė fontSize = 20px;
+console.log('______________ UŽDAVINYS Nr.3E _________________');
+
+document.querySelector('#contacts u').addEventListener('click', e => {
+   e.target.classList.toggle('big');
+});
+
+
+
+// UŽDAVINYS Nr.3F
+//	Padaryti taip, kad paspaudus ant X, esančio tage su id contacts, pridėtos tage su id contacts savybės būtų panaikintos
+console.log('______________ UŽDAVINYS Nr.3F _________________');
+
+
+
+// UŽDAVINYS Nr.3G
+//	Padaryti tai ką liepia mygtukai Header2 sekcijoje;
+console.log('______________ UŽDAVINYS Nr.3G _________________');
+
+
+
+// UŽDAVINYS Nr.4A
+//	Padaryti, kad dukartus paspaudus ant naujų gyvūnų jie nusispalvintu raudonai
+console.log('______________ UŽDAVINYS Nr.4A _________________');
+
+document.querySelectorAll('.new').forEach(animal => {
+   animal.addEventListener('dblclick', e => {
+       e.target.style.color = 'red';
+   })
+})
