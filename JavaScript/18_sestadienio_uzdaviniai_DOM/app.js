@@ -231,15 +231,25 @@ iClick.addEventListener('click', myFunction3)
 // o paspaudus dar kartą vėl grįžtu į baltą spalvą
 console.log('______________ UŽDAVINYS Nr.3C _________________');
 
-const priceBg = function (e) {
-   //e.stopPropogation();
-   e.target.classList.toggle('bgColor');
-   
+//const priceBg = function (e) {
+//   //e.stopPropogation();
+//   e.target.classList.toggle('bgColor');
+//}
+
+//document.querySelector('.prices').addEventListener('click', priceBg);
+
+
+
+// antras sprendimas be 'toggle'.
+
+const backgroundGray = el => {
+    if (el.target.style.backgroundColor === '' || el.target.style.backgroundColor === 'white'){
+        el.target.style.backgroundColor = 'gray';
+    }
+    else {el.target.style.backgroundColor = 'white'};
 }
 
-document.querySelector('.prices').addEventListener('click', priceBg);
-
-
+document.querySelector('.prices').addEventListener('click', backgroundGray);
 
 
 // UŽDAVINYS Nr.3D
