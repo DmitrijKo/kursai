@@ -76,3 +76,16 @@ const h3 = document.querySelector('h3');
 select1.addEventListener('input', () => {
    h3.innerText = select1.value;
 })
+
+
+const select2 = document.querySelector('[name=select2]');
+const reset = document.querySelector('#reset')
+
+select2.addEventListener('change', (e) => {
+   h3.style.color = e.target.value;
+})
+
+reset.addEventListener('click', () => {
+   h3.innerText = 'Labas';
+   h3.style.color = 'black';
+})
