@@ -34,22 +34,25 @@ for(let i = 0; i < ul.length; i++) {
 
 console.log('__________ Nr. 4 __________');
 
-// Pirma funkcija
-function myFunction1(x) {
-   return x.dataset.value === 'b';
+// Vardine funkcija
+function myFunction1(arr, index) {
+   return arr[index].dataset.value === 'b';
 }
 
-// Antra funkcija
-c2 = (e) => {return e.dataset.value === 'b';}
+// Anonimine funkcija
+const an1 = function(arr, index) {
+   return arr[index].dataset.value === 'b';
+}
+
+// Anonimine Arrow funkcija
+an2 = (arr, index) => arr[index].dataset.value === 'b';
 
 
 for(let i = 0; i < ul.length; i++) {
    console.log(ul[i].dataset.value);
    const li = ul[i].querySelectorAll('li');
    for(let j = 0; j < li.length; j++) {
-      // Trecia funkcija
-      const c1 = myFunction1(li[j]);
-      if(c1) {
+      if(an1) {
          console.log(j);
       }
    }
