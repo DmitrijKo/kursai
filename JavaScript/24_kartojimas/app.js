@@ -102,11 +102,13 @@ check1.addEventListener('click', (e) => {
 // 5.
 check2.forEach(chEl => {
    chEl.addEventListener('change', () => {
+      let out = '';
       check2.forEach(ch => {
          if (ch.checked) {
-            h1.innerText = ch.value;
+            out += ch.value + '';
          }
       });
+      h1.innerText = out;
    });
 });
 
