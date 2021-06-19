@@ -170,3 +170,12 @@ check2.forEach(chEl => {
       });
    });
 });
+
+
+
+// Pakartoti 1-5 uždavinius. 
+// Kiekvienam uždaviniui sukurti naują tuščią masyvą (arba vieną objektą su 5 masyvais viduje). 
+// Kiekvieną pasikeitimo reikšmę įrašyti į masyvą kaip naują elementą 
+// (5 uždavinio atveju įrašyti masyvą su pažymėtom reikšmėm) ir į console.log išvesti tą masyvą.
+console.log('__________ Nr. 8 __________');
+
