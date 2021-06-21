@@ -179,3 +179,143 @@ check2.forEach(chEl => {
 // (5 uždavinio atveju įrašyti masyvą su pažymėtom reikšmėm) ir į console.log išvesti tą masyvą.
 console.log('__________ Nr. 8 __________');
 
+// 1.
+let arr1 = [];
+//const input1 = document.querySelector('.in1');
+
+const b1Click2 = function() {
+   arr1.push(input1.value);
+   console.log(arr1);
+}
+
+document.querySelector('#b1').addEventListener('click', b1Click2);
+
+// 2.
+let arr2 = [];
+
+const s1Console2 = function() {
+   arr2.push(select1.value);
+   console.log(arr2);
+}
+
+select1.addEventListener('change', s1Console2);
+
+// 3.
+let arr3 = [];
+
+for(let i = 0; i < radio1.length; i++) {
+   radio1[i].addEventListener('change', (e) => {
+      arr3.push(e.target.value);
+      console.log(arr3)
+   });        
+}
+
+// 4.
+let arr4 = [];
+
+check1.addEventListener('change', (e) => {
+   if(e.target.checked) {
+      arr4.push('Pažymėta');
+      console.log(arr4)
+   } else {
+      arr4.push('Nepažymėta');
+      console.log(arr4)
+   }
+});
+
+// 5.
+let arr5 = [];
+
+check2.forEach(chEl => {
+   chEl.addEventListener('change', () => {
+      let temp =[];
+      check2.forEach(ch => {
+         if (ch.checked) {
+            temp.push(ch.value);
+         }
+      });
+      arr5.push(temp)
+      console.log(arr5);
+   });
+});
+
+
+
+// Padarykite mygtuką “GO”, kurį paspaudus, naudojant masyvus gautus 8 uždavinyje, 
+// dinamiškai iš tų masyvų duomenų būtų sukurti h3 tagai kaip tai buvo padaryta 7 uždavinyje.
+console.log('__________ Nr. 9 __________');
+
+const go = document.querySelector('#go');
+const h3Div2 = document.querySelector('.h3Div2');
+
+go.addEventListener('click', () => {
+   arr1.forEach(e => {
+      let h3 = document.createElement('h3');
+      h3.style.color = 'green';
+      h3.innerText = e;
+      h3Div2.appendChild(h3);
+   });
+   arr2.forEach(e => {
+      let h3 = document.createElement('h3');
+      h3.style.color = 'green';
+      h3.innerText = e;
+      h3Div2.appendChild(h3);
+   });
+   arr3.forEach(e => {
+      let h3 = document.createElement('h3');
+      h3.style.color = 'green';
+      h3.innerText = e;
+      h3Div2.appendChild(h3);
+   });
+   arr4.forEach(e => {
+      let h3 = document.createElement('h3');
+      h3.style.color = 'green';
+      h3.innerText = e;
+      h3Div2.appendChild(h3);
+   });
+   arr5.forEach(e => {
+      let h3 = document.createElement('h3');
+      h3.style.color = 'green';
+      h3.innerText = e;
+      h3Div2.appendChild(h3);
+   });
+});
+
+
+
+// Padaryti mygtuką “Reset”, kuris ištrintų duomenis iš visų masyvų.
+console.log('__________ Nr. 10 __________');
+
+const reset = document.querySelector('#reset');
+reset.addEventListener('click', () => {
+   arr1 = [];
+   arr2 = [];
+   arr3 = [];
+   arr4 = [];
+   arr5 = [];
+})
+
+
+
+// Padaryti mygtuką “Clear”, kuris ištrintų visus h3 tagus iš DOM’o.
+console.log('__________ Nr. 11 __________');
+
+const clear = document.querySelector('#clear');
+clear.addEventListener('click', () => {
+   const h3All = document.querySelectorAll('h3');
+   h3All.forEach((e) => {
+   e.remove();
+   })
+});
+
+
+
+// Padaryti mygtuką “GO JSON”, kurį paspaudus, 9 uždavinio masyvus būtų sudėti į sukurtą naują objektą. 
+// Tą objektą paversti JSON stringu ir užsaugoti susikurtam kintamąjame. 
+// Kintamąjį išvesti i console.log. Nuskaityti JSON stringą iš kintamojo, 
+// paversti jį objektu ir iš jo informacijos suformuoti h3 tagus kaip 9 uždavinyje.
+console.log('__________ Nr. 12 __________');
+
+
+
+
