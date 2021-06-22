@@ -310,7 +310,8 @@ clear.addEventListener('click', () => {
 
 
 
-// 1. Padaryti mygtuką “GO JSON”, kurį paspaudus, 9 uždavinio masyvus būtų sudėti į sukurtą naują objektą. 
+// Padaryti mygtuką “GO JSON”.
+// 1. Paspaudus jį, 9 uždavinio masyvus būtų sudėti į sukurtą naują objektą. 
 // 2. Tą objektą paversti JSON stringu ir užsaugoti susikurtam kintamąjame ir kintamąjį išvesti i console.log.
 // 3. Nuskaityti JSON stringą iš kintamojo, paversti jį objektu ir iš jo informacijos suformuoti h3 tagus kaip 9 uždavinyje.
 console.log('__________ Nr. 12 __________');
