@@ -310,11 +310,57 @@ clear.addEventListener('click', () => {
 
 
 
-// Padaryti mygtuką “GO JSON”, kurį paspaudus, 9 uždavinio masyvus būtų sudėti į sukurtą naują objektą. 
-// Tą objektą paversti JSON stringu ir užsaugoti susikurtam kintamąjame. 
-// Kintamąjį išvesti i console.log. Nuskaityti JSON stringą iš kintamojo, 
-// paversti jį objektu ir iš jo informacijos suformuoti h3 tagus kaip 9 uždavinyje.
+// 1. Padaryti mygtuką “GO JSON”, kurį paspaudus, 9 uždavinio masyvus būtų sudėti į sukurtą naują objektą. 
+// 2. Tą objektą paversti JSON stringu ir užsaugoti susikurtam kintamąjame ir kintamąjį išvesti i console.log.
+// 3. Nuskaityti JSON stringą iš kintamojo, paversti jį objektu ir iš jo informacijos suformuoti h3 tagus kaip 9 uždavinyje.
 console.log('__________ Nr. 12 __________');
+
+let jsonbObject = {};
+const json = document.querySelector('#json');
+
+json.addEventListener('click', () => {
+   // 1.
+   jsonbObject.arr1 = arr1;
+   jsonbObject.arr2 = arr2;
+   jsonbObject.arr3 = arr3;
+   jsonbObject.arr4 = arr4;
+   jsonbObject.arr5 = arr5;
+
+   // 2.
+   const js = JSON.stringify(jsonbObject);
+   console.log(js);
+
+   // 3.
+   jsonbObject2 = JSON.parse(js);
+   console.log(jsonbObject2);
+   for (const prop in jsonbObject2) {
+      jsonbObject2[prop].forEach(e => {
+         let h3 = document.createElement('h3');
+         h3.style.color = 'blue';
+         h3.innerText = e;
+         document.querySelector('body').appendChild(h3);
+      });
+   }
+});
+
+
+
+// Reikia dvieju inputu (type text) ir reikia mygtuko.
+// 1. Paspaudus mygtuką, tekstas kuris yra inpute nr 1 būtų atvaizduotas konsolėjė,
+// 2. Tekstas iš inputo nr 2 būtų atvaizduotas dinamiškai sukurtame tage h1.
+console.log('__________ Nr. 13 __________');
+
+document.querySelector('#b2').addEventListener('click', () => {
+   // 1.
+   console.log(document.querySelector('.in2').value);
+   // 2.
+   const input3Text = document.createTextNode(document.querySelector('.in3').value);
+   const h1 = document.createElement('h1');
+   h1.appendChild(input3Text);
+   document.querySelector('body').appendChild(h1);
+});
+
+
 
 
 
