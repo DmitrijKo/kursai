@@ -368,7 +368,7 @@ document.querySelector('#b2').addEventListener('click', () => {
 console.log('__________ Nr. 14 __________');
 
 document.querySelector('#span').addEventListener('click', () => {
-   for (let i = 1; i < 101; i++) {
+   for (let i = 0; i <= 100; i++) {
       const spanText = document.createTextNode(i + ' ');
       const span = document.createElement('span');
       span.appendChild(spanText);
