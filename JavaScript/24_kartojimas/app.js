@@ -293,7 +293,7 @@ reset.addEventListener('click', () => {
    arr3 = [];
    arr4 = [];
    arr5 = [];
-})
+});
 
 
 
@@ -332,13 +332,14 @@ json.addEventListener('click', () => {
    console.log(js);
 
    // 3.
-   jsonbObject2 = JSON.parse(js);
+   const jsonbObject2 = JSON.parse(js);
    console.log(jsonbObject2);
    for (const prop in jsonbObject2) {
       jsonbObject2[prop].forEach(e => {
+         const h3Text = document.createTextNode(e);
          let h3 = document.createElement('h3');
          h3.style.color = 'blue';
-         h3.innerText = e;
+         h3.appendChild(h3Text);
          document.querySelector('body').appendChild(h3);
       });
    }
@@ -360,6 +361,22 @@ document.querySelector('#b2').addEventListener('click', () => {
    h1.appendChild(input3Text);
    document.querySelector('body').appendChild(h1);
 });
+
+
+
+// 100 span'u užduotis. Mygtuko paspaudimu į DOM'ą išvesti 100 spanų su skaičiais nuo ą iki 100.
+console.log('__________ Nr. 14 __________');
+
+document.querySelector('#span').addEventListener('click', () => {
+   for (let i = 1; i < 101; i++) {
+      const spanText = document.createTextNode(i + ' ');
+      const span = document.createElement('span');
+      span.appendChild(spanText);
+      document.querySelector('body').appendChild(span);
+   }
+});
+
+
 
 
 
