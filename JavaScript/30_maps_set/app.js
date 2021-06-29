@@ -116,17 +116,6 @@ arr3.forEach(e => mapsCopy.set(e[0], e[1]));
 console.log(mapsCopy);
 
 
-// sudėlioti tokia tvarka: masyvai, mapai, setai
-console.log('--------');
 
-const notSoEasy = [
-   [1,8],
-   new Set([7, 9]),
-   new Set(),
-   new Map([['a',2], ['b',2], ['c',2]]),
-   [1,8,7],
-   new Set([7, 9, 11]),
-   [],
-   new Set([7, 9, 71, 11, 45]),
-   new Map([['a',2], ['c',2]]),
-];
+
+
