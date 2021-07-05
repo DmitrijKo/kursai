@@ -2,6 +2,7 @@ const setas = new Set();
 setas.add('grybas');
 setas.add('aguras');
 setas.add('pupelė (ankštinė)');
+console.log(setas);
 
 console.log('--- 1 ---');
 // 1. išrušiuoti setą pagal abėcėlę.
