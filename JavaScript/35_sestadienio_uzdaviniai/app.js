@@ -115,14 +115,11 @@ console.log(Sorter.sortDesc(map1));
 
 
 // 7.
-// A. Pagaminti MAP tipo objekta kuriame raktas yra id is json'o stringo ir isvesti i console.
-// B. Pagaminti mygtuka HTML'e, kuri paspaudus is json'o stringo pasidarytu Set tipo objektas
-//  su reiksmemis (kompaniju vardai) isrusiuotais pagal Asc ir isvesti seta i konsole.
 console.log('---- 7 ----');
 
 const json = '[{"id":1,"title":"MAC"},{"id":2,"title":"Nike"},{"id":3,"title":"Victoria\u2019s Secret"},{"id":4,"title":"Zara"},{"id":5,"title":"Zizzi"},{"id":6,"title":"Witteveen"},{"id":7,"title":"H&M"},{"id":8,"title":"RIMOWA"},{"id":9,"title":"Adidas"},{"id":10,"title":"Paw Patrol"},{"id":11,"title":"Mattel"},{"id":12,"title":"Kenzo"},{"id":13,"title":"Asos"}]';
 
-// A.
+// A. Pagaminti MAP tipo objekta kuriame raktas yra id is json'o stringo ir isvesti i console.
 const jsonArr = JSON.parse(json);
 const map = new Map();
 jsonArr.forEach(e => {
@@ -131,12 +128,11 @@ jsonArr.forEach(e => {
 
 console.log(map);
 
-// B.
-
+// B. Pagaminti mygtuka HTML'e, kuri paspaudus is json'o stringo pasidarytu Set tipo objektas
+//  su reiksmemis (kompaniju vardai) isrusiuotais pagal Asc ir isvesti seta i konsole.
 document.querySelector('button').addEventListener('click', () => {
    const set = new Set();
    jsonArr.forEach(e => {
-      //set.add(e.id);
       set.add(e.title);
    });
    const arr = [...set];
@@ -145,3 +141,87 @@ document.querySelector('button').addEventListener('click', () => {
    arr.forEach(e => set.add(e));
    console.log(set);
 });
+
+
+// 8.
+console.log('---- 8 ----');
+
+function rand(min, max) {
+   min = Math.ceil(min);
+   max = Math.floor(max);
+   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+console.log('A');
+// A. reikia sukurti masyva kurio reiksmes yra atsitiktines nuo 10 iki 20. Masyvo ilgis 25 elementai.
+const arr1 = [];
+for (let i = 0; i < 25; i++) {
+   arr1.push(rand(10, 20));
+}
+console.log(arr1);
+
+// B. Reikia sukurti masyvą, kurio reikšmės yra atsitiktinės nuo 10 iki 20.
+// Masyvo ilgis nustatomas pagal masyvo reikšmes. 
+// Generuoti masyva tol, kol jame atsiras 3 reikšmės lygios 13;
+console.log('B');
+
+const arr2 = [];
+let counter = 0;;
+do {
+   const random = rand(10, 20);
+   arr2.push(random);
+   if(random === 13) {
+      counter++;
+   }
+} while (counter < 3 );
+
+console.log(arr2);
+
+
+// C. Reikia sukurti Set objektą, kurio reikšmės yra atsitiktinės nuo 10 iki 20;
+// Set'o dydis yra VISOS reikšmės nuo 10 iki 20;
+console.log('C');
+
+const set33 = new Set();
+
+do {
+   set33.add(rand(10, 20));
+} while (set33.size < 11);
+
+console.log(set33);
+
+
+// D. Reikia sukurti Map objektą, kurio reikšmės yra atsitiktinės nuo 10 iki 20, 
+// o raktai (indeksai) yra irgi atsitiktinės reikšmės nuo 10 iki 20;
+// Map'ą generuoti tol, kol jame bus 3 reikšmės lygios 13.
+console.log('D');
+
+const map33 = new Map();
+let counter2;
+
+do {
+   const randomValue = rand(10, 20);
+
+   if (randomValue === 13) {
+      map33.set(rand(10, 20), randomValue + '');
+   }
+   else {
+      map33.set(rand(10, 20), randomValue);
+   }
+   counter2 = 0;
+   map33.forEach(v => v == 13 ? counter2++ : counter2);
+
+} while (counter2 < 3 );
+
+console.log(map33);
+
+
+//E. Sukurt Set tipo objektą pagal C sąlygą, tik jo ilgis turi būti 10.
+// Surasti, kokio skaitmens trūksta Set'e, palyginus su generuojama atsitiktinių reikšmių aibe.
+console.log('E');
+
+
+//F. Taip, kaip D sąlygoje tik 3 vienodos reikšmės gali būti bet kokie skaičiai.
+console.log('F');
+
+
